@@ -5,8 +5,12 @@ class CardProduit extends HTMLElement {
 
         const url = this.getAttribute('url') || '#';
         const title = this.getAttribute('title');
-        const image = this.getAttribute('img');
+        const image = this.getAttribute('img') || '';
         const categorie = this.getAttribute('categorie');
+        const description = this.getAttribute('description');
+        const quantite = parseInt(this.getAttribute('quantite')) || 0;
+        const prix = this.getAttribute('prix');
+        const dispo = quantite > 0;
 
         this.shadowRoot.innerHTML = `
         <style>
@@ -257,9 +261,11 @@ class CardProduit extends HTMLElement {
                     
                     <div class="interactive-info-box no-hover">
                         <div class="view-default">
-                            ${info || ''}
+                            ${description || ''}
                         </div>
                     </div>
+
+                    <div class="price">${prix} €</div>
 
                     <a href="${url}" class="btn">Voir plus</a>
                 </div>
