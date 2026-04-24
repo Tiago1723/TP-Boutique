@@ -8,6 +8,6 @@
     <link href="public/css/reset.css" rel="stylesheet"/>
 
     <script src="public/js/main.js" defer></script>
-    <title><?= isset($title) ? htmlspecialchars($title) : 'event' ?></title>
+    <title><?= isset($title) ? htmlspecialchars($title) : 'Page inconnu' ?></title>
 </head>
 <body>

@@ -1,5 +1,5 @@
 <?php
-    require_once "./Secure.php";
+    require_once "Secure.php";
 
     class Database extends Secure {
 
@@ -11,8 +11,8 @@
 
                 $host = "localhost";
                 $dbname = "boutique_en_ligne";
-                $user = getUserDB();
-                $pass = getPasswordDB();
+                $user = self::getUserDB();
+                $pass = self::getPasswordDB();
 
                 try {
                     self::$instance = new PDO(
