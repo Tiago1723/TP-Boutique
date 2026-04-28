@@ -7,6 +7,7 @@
     <link href="public/css/main.css" rel="stylesheet"/>
     <link href="public/css/reset.css" rel="stylesheet"/>
 
+    <script src="public/js/Components.js" defer></script>
     <script src="public/js/main.js" defer></script>
     <title><?= isset($title) ? htmlspecialchars($title) : 'Page inconnu' ?></title>
 </head>

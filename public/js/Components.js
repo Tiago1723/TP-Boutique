@@ -6,7 +6,7 @@ class CardProduit extends HTMLElement {
         const url = this.getAttribute('url') || '#';
         const title = this.getAttribute('title');
         const image = this.getAttribute('img') || '';
-        const categorie = this.getAttribute('categorie');
+        const categorie = this.getAttribute('categorie') || 0;
         const description = this.getAttribute('description');
         const quantite = parseInt(this.getAttribute('quantite')) || 0;
         const prix = this.getAttribute('prix');

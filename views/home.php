@@ -1,7 +1,3 @@
-<?php
-    var_dump($produits);
-    var_dump($categories);
-?>
 <main>
     <?php foreach($produits as $produit): ?>
         <card-produit
@@ -11,6 +7,7 @@
             categorie="<?= htmlspecialchars($produit["categorie_id"]) ?>"
             description="<?= htmlspecialchars($produit["description"]) ?>"
             quantite="<?= htmlspecialchars($produit["quantite"]) ?>"
+            prix="<?= htmlspecialchars($produit["prix"]) ?>"
         ></card-produit>
     <?php endforeach ?>
 </main>
