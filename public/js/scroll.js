@@ -39,15 +39,6 @@ SCROLL_GROUPE.forEach(GROUPE => {
     });
   }
 
-  function test() {
-    console.log("petit verife pour nvim")
-    //sa a laire de marcher
-
-    return {
-      "caca": 12
-    }
-  }
-
   function elAsHiden(el) {
     if (elementVisible[0] == el) {
       let e = el.cloneNode()
@@ -68,14 +59,14 @@ SCROLL_GROUPE.forEach(GROUPE => {
 
       const el = entry.target;
 
-      //crée la liste des el visible
+      //crée la liste des produits visibles
       if (!allLoadedd && entry.isIntersecting) {
         elementVisible.push(el);
         el.classList.add('visible')
         return;
       }
 
-      //ci visible
+      //si visible
       if (entry.isIntersecting) {
         el.classList.add('visible')
         return;
@@ -99,18 +90,13 @@ SCROLL_GROUPE.forEach(GROUPE => {
   GROUPE_ELEMENT.forEach(x => observer.observe(x));
 
 
-  /**
-* regarde l'event 
-*/
+  //donne la touche qui est actuellement appuyé
   window.addEventListener('keydown', (e) => {
     if (!keyPressNow) {
       keyPressNow = e.key;
     }
   })
 
-  /**
-   * regarde l'event 
-   */
   window.addEventListener('keyup', (e) => {
     if (keyPressNow) {
       keyPressNow = null;
@@ -231,7 +217,7 @@ SCROLL_GROUPE.forEach(GROUPE => {
   }, { passive: false });
 
   ///////////////
-  //      EVENTS mobil
+  //      EVENTS mobile
   ///////////////
 
   GROUPE.addEventListener("touchstart", (e) => startDrag(e.touches[0].clientX));
