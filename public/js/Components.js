@@ -258,6 +258,19 @@ class CardProduit extends HTMLElement {
                 
                 <div class="hidden-content">
                     ${categorie ? `<div class="tags">${categorie}</div>` : ''}
+
+                    <div class="dispo-row">
+                        <span class="dot"></span>
+                        <span>${dispo ? 'Disponible' : 'Indisponible'}</span>
+                    </div>
+                    <div class="price-stars-row">
+                        <span class="price">${price || 'N/A'}</span>
+                        ${!isNaN(note) ? `
+                        <div class="stars-container">
+                            ${this.genNoteStar(note)}
+                            ${reviews ? `<span class="reviews">(${reviews})</span>` : ''}
+                        </div>` : ''}
+                    </div>
                     
                     <div class="interactive-info-box no-hover">
                         <div class="view-default">
@@ -267,7 +280,7 @@ class CardProduit extends HTMLElement {
 
                     <div class="price">${prix} €</div>
 
-                    <a href="${url}" class="btn">Voir plus</a>
+                    <a href="produit?id=${url}" class="btn">Voir plus</a>
                 </div>
             </div>
         </div>

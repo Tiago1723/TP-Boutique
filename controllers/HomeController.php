@@ -5,7 +5,7 @@ class HomeController extends Controller {
             $Produit = new Produit();
             $Categorie = new Categorie();
 
-            $produits = $Produit->getAll();
+            $produits = $Produit->getAllAndCategorieName();
             $categories = $Categorie->getAll();
 
             $this->view('home', ['title'=>'Boutique en ligne - Accueil', 'produits'=> $produits, 'categories'=> $categories]);
