@@ -1,15 +1,18 @@
 <main>
-    <div class="container"> 
-        <?php foreach($produits as $produit): ?>
-            <card-produit
-                title="<?= htmlspecialchars($produit["nom"]) ?>"
-                url="<?= htmlspecialchars($produit["id"]) ?>"
-                img="<?= htmlspecialchars($produit["image"] ?? '') ?>"
-                categorie="<?= htmlspecialchars($produit["categorie_nom"]) ?>"
-                description="<?= htmlspecialchars($produit["description"]) ?>"
-                quantite="<?= htmlspecialchars($produit["quantite"]) ?>"
-                prix="<?= htmlspecialchars($produit["prix"]) ?>"
-            ></card-produit>
-        <?php endforeach ?>
+    <div class="scroll-container">
+        <div class="scroll-group">
+            <?php foreach($produits as $produit): ?>
+                <card-produit
+                    title="<?= htmlspecialchars($produit["nom"]) ?>"
+                    url="<?= htmlspecialchars($produit["id"]) ?>"
+                    img="<?= htmlspecialchars($produit["image"] ?? '') ?>"
+                    categorie="<?= htmlspecialchars($produit["categorie_nom"]) ?>"
+                    description="<?= htmlspecialchars($produit["description"]) ?>"
+                    quantite="<?= htmlspecialchars($produit["quantite"]) ?>"
+                    prix="<?= htmlspecialchars($produit["prix"]) ?>"
+                ></card-produit>
+            <?php endforeach ?>
+        </div>
     </div>
 </main>
+<script src="public/js/scroll.js" defer></script>

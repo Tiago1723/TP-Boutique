@@ -1,3 +1,45 @@
 .container {
     display: flex;
 }
+
+.scroll-box {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    
+    cursor: grab;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; 
+}
+
+.scroll-container:active {
+    cursor: grabbing;
+}
+
+.scroll-container {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    width: 100%;
+}
+
+.scroll-group {
+    display: flex;
+    gap: 20px;
+    min-width: max-content;
+}
+
+.scroll-container:hover .scroll-group {
+    animation-play-state: paused;
+}
+
+.scroll-container.dragging .manga-cover {
+    pointer-events: none;
+}
