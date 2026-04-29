@@ -263,14 +263,6 @@ class CardProduit extends HTMLElement {
                         <span class="dot"></span>
                         <span>${dispo ? 'Disponible' : 'Indisponible'}</span>
                     </div>
-                    <div class="price-stars-row">
-                        <span class="price">${price || 'N/A'}</span>
-                        ${!isNaN(note) ? `
-                        <div class="stars-container">
-                            ${this.genNoteStar(note)}
-                            ${reviews ? `<span class="reviews">(${reviews})</span>` : ''}
-                        </div>` : ''}
-                    </div>
                     
                     <div class="interactive-info-box no-hover">
                         <div class="view-default">
